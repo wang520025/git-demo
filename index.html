@@ -1,3 +1,56 @@
 这是index.html文件,212121232212121.
 222
 我改了你的文件,我是黑客,哈批
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color:skyblue;
+    }
+    div {
+        width: 200px;
+        height: 400px;
+        background-color: #fff;
+        border-left: 200px solid black;
+        margin: 100px auto;
+        border-radius: 50%;
+        /* transition: all 2s ; */
+        animation: move 0.5s linear infinite;
+
+    }
+    div::after,div::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: -100px;
+    }
+    div::before {
+			background-color: #fff;
+			border: 75px solid #000;
+		}
+	div::after {
+			background-color: #000;
+			border: 75px solid #fff;
+    }
+    /* div:hover {
+        transform: rotate(360deg);
+    } */
+    @keyframes move {
+        0%{}
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div></div>
+</body>
+</html>
